@@ -89,6 +89,38 @@
         "@type": "Answer",
         "text": "Esam noslēguma sagatavošanās posmā. Pieteikšanās vietnē rezervē bezmaksas pirmo gadu un nosūtīs vēstuli brīdī, kad SendScan būs pieejams."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Vai SendScan der mājas lietošanai, ne tikai birojiem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jā. SendScan tikpat labi strādā uz viena mājas printera, cik uz biroja printeru parka — katrs ģimenes loceklis var reģistrēt savu adresi uz tās pašas fiziskās ierīces, tāpēc skenēšana vairs nav kaut kas, ko lūdzat izdarīt vienam cilvēkam mājās."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vai IT administrators var ar SendScan pārvaldīt skenēšanu uz e-pastu vairākiem printeriem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jā. Katrs printeris saņem savu, uz foto balstītu iestatīšanu un savu adresi, tāpēc administrators var ieviest SendScan visā jauktu zīmolu printeru parkā, neapgūstot katra printera savādāko SMTP izvēlni, un pieslēgt jaunus darbiniekus, pie printera vairs neejot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vai viesis vai apmeklētājs var izmantot SendScan uz cita printera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jā. SendScan iestatīšanai nepieciešama tikai fiziska piekļuve printera ekrānam dažas minūtes — nav nepieciešams, lai administrators jūs iepriekš pievieno organizācijas adrešu grāmatai."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas notiek ar manu SendScan iestatījumu, ja nomainu printeri?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jūs nofotografējat jauno printeri un saņemat tam jaunu konfigurāciju. Jūsu skenējumu vēsture un adrese turpina darboties — aparatūras nomaiņa nenozīmē sākt no jauna."
+      }
     }
   ]
 }
@@ -99,6 +131,12 @@
 <header class="site-header">
   <div class="wrap">
     <a href="index.html" class="logo">Send<span class="dot">Scan</span></a>
+    <nav class="main-nav" aria-label="Sadaļa">
+      <a href="#why">Kāpēc</a>
+      <a href="#how-it-works">Kā tas strādā</a>
+      <a href="#pricing">Cenas</a>
+      <a href="#faq">BUJ</a>
+    </nav>
     <div class="header-actions">
       <nav class="lang-switch" aria-label="Valoda">
         <a href="../index.html" lang="en" hreflang="en">EN</a>
@@ -113,25 +151,32 @@
 
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Drīzumā — piesakieties un saņemiet bezmaksas pirmo gadu</span>
-      <h1>Skenēšana uz e-pastu.<br>Beidzot tiešām vienkārši.</h1>
-      <p class="lede">Gandrīz katram printerim jau ir iebūvēta skenēšana uz e-pastu — tikai SMTP iestatījumi padara to par mocekli. SendScan nofotografē jūsu printeri, izveido tam precīzu konfigurāciju un ļauj skenēt tieši savā iesūtnē dažu minūšu laikā.</p>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="eyebrow">Drīzumā — piesakieties un saņemiet bezmaksas pirmo gadu</span>
+          <h1>Skenēšana uz e-pastu.<br>Beidzot tiešām vienkārši.</h1>
+          <p class="lede">Gandrīz katram printerim jau ir iebūvēta skenēšana uz e-pastu — tikai SMTP iestatījumi padara to par mocekli. SendScan nofotografē jūsu printeri, izveido tam precīzu konfigurāciju un ļauj skenēt tieši savā iesūtnē dažu minūšu laikā.</p>
 
-      <div class="signup-form" data-signup-form id="signup">
-        <form>
-          <div class="row">
-            <label for="email" class="sr-only" style="position:absolute;left:-9999px;">E-pasta adrese</label>
-            <input type="email" id="email" name="email" placeholder="jusu@epasts.lv" required autocomplete="email">
-            <button type="submit" class="btn btn-primary">Pieteikties agrīnai piekļuvei</button>
+          <div class="signup-form" data-signup-form id="signup">
+            <form>
+              <div class="row">
+                <label for="email" class="sr-only" style="position:absolute;left:-9999px;">E-pasta adrese</label>
+                <input type="email" id="email" name="email" placeholder="jusu@epasts.lv" required autocomplete="email">
+                <button type="submit" class="btn btn-primary">Pieteikties agrīnai piekļuvei</button>
+              </div>
+            </form>
+            <div class="form-success" role="status">Jūs esat sarakstā! Uzrakstīsim, tiklīdz SendScan būs pieejams — ar jūsu bezmaksas pirmo gadu.</div>
+            <p class="form-note">Bez surogātpasta. Viena vēstule, kad startēsim. Pirmais gads bez maksas, tad €10/gadā par printeri.</p>
           </div>
-        </form>
-        <div class="form-success" role="status">Jūs esat sarakstā! Uzrakstīsim, tiklīdz SendScan būs pieejams — ar jūsu bezmaksas pirmo gadu.</div>
-        <p class="form-note">Bez surogātpasta. Viena vēstule, kad startēsim. Pirmais gads bez maksas, tad €10/gadā par printeri.</p>
+        </div>
+        <div class="hero-visual">
+          <img src="../assets/images/hero-scan.svg" alt="Ilustrācija: printeris skenē lapu un nogādā to tieši iesūtnē, atzīmēts kā saņemts" width="380" height="304">
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="why">
     <div class="wrap">
       <div class="section-head">
         <h2>Kurš no šiem esat jūs</h2>
@@ -140,16 +185,19 @@
 
       <div class="usecases">
         <input type="radio" name="usecase" id="uc-home" class="tab-input" checked>
-        <label class="tab" for="uc-home">🏠 Mājās</label>
+        <label class="tab" for="uc-home"><img src="../assets/images/icon-home.svg" alt="" width="24" height="24"> Mājās</label>
         <input type="radio" name="usecase" id="uc-office" class="tab-input">
-        <label class="tab" for="uc-office">🏢 Birojā</label>
+        <label class="tab" for="uc-office"><img src="../assets/images/icon-office.svg" alt="" width="24" height="24"> Birojā</label>
         <input type="radio" name="usecase" id="uc-guest" class="tab-input">
-        <label class="tab" for="uc-guest">🧳 Ceļā</label>
+        <label class="tab" for="uc-guest"><img src="../assets/images/icon-guest.svg" alt="" width="24" height="24"> Ceļā</label>
         <input type="radio" name="usecase" id="uc-swap" class="tab-input">
-        <label class="tab" for="uc-swap">🔁 Jauns printeris</label>
+        <label class="tab" for="uc-swap"><img src="../assets/images/icon-swap.svg" alt="" width="24" height="24"> Jauns printeris</label>
 
         <div class="panel" id="panel-home">
-          <h3 class="panel-title">Mājsaimniecība ar vienu skeneri</h3>
+          <div class="panel-header">
+            <img class="panel-icon" src="../assets/images/icon-home.svg" alt="" width="52" height="52">
+            <h3 class="panel-title">Mājsaimniecība ar vienu skeneri</h3>
+          </div>
           <div class="panel-grid">
             <div class="panel-block">
               <span class="panel-label">Problēma</span>
@@ -164,10 +212,17 @@
               <p>Nav nekā, kas jāsaprot par SMTP, portiem vai sertifikātiem. Nofotografējat printeri, mēs iedodam konfigurāciju, jūs to vienreiz ievadāt printera skārienekrānā. Piecas minūtes — un tā ir pēdējā reize, kad kādam mājās jālūdz palīdzība kaut ko noskenēt.</p>
             </div>
           </div>
+          <div class="panel-block panel-block--summary">
+            <span class="panel-label">Īsumā</span>
+            <p>SendScan ļauj katram mājsaimniecības loceklim reģistrēt savu adresi uz printera, kas jums jau pieder, tāpēc nevienam vairs nav jālūdz ģimenes loceklis noskenēt viņa dokumentus.</p>
+          </div>
         </div>
 
         <div class="panel" id="panel-office">
-          <h3 class="panel-title">IT bezgalīgā skenēšanas rinda</h3>
+          <div class="panel-header">
+            <img class="panel-icon" src="../assets/images/icon-office.svg" alt="" width="52" height="52">
+            <h3 class="panel-title">IT bezgalīgā skenēšanas rinda</h3>
+          </div>
           <div class="panel-grid">
             <div class="panel-block">
               <span class="panel-label">Problēma</span>
@@ -182,10 +237,17 @@
               <p>Viens foto katram printerim, viena konfigurācija, viena piecu minūšu vizīte pie katras ierīces — izdarīts vienreiz, nevis atkārtots katram jaunam darbiniekam. Jaunie darbinieki vienkārši saņem savu adresi; pie printera vairs nevienam nav jāiet.</p>
             </div>
           </div>
+          <div class="panel-block panel-block--summary">
+            <span class="panel-label">Īsumā</span>
+            <p>SendScan aizstāj manuālu SMTP iestatīšanu katram printerim ar piecu minūšu, uz fotoattēlu balstītu iestatīšanu, kas strādā vienādi visiem printeru zīmoliem birojā, samazinot IT atkārtotos skenēšanas uz e-pastu pieprasījumus līdz nullei.</p>
+          </div>
         </div>
 
         <div class="panel" id="panel-guest">
-          <h3 class="panel-title">Viesis, kurš nevar noskenēt</h3>
+          <div class="panel-header">
+            <img class="panel-icon" src="../assets/images/icon-guest.svg" alt="" width="52" height="52">
+            <h3 class="panel-title">Viesis, kurš nevar noskenēt</h3>
+          </div>
           <div class="panel-grid">
             <div class="panel-block">
               <span class="panel-label">Problēma</span>
@@ -200,10 +262,17 @@
               <p>Tāda pati viena-foto plūsma kā jebkur citur. Nav jābūt "IT cilvēkam" vai jāsaņem īpaša piekļuve — vajag tikai printera skārienekrānu un divas minūtes.</p>
             </div>
           </div>
+          <div class="panel-block panel-block--summary">
+            <span class="panel-label">Īsumā</span>
+            <p>SendScan strādā ikvienam, kurš stāv printera priekšā, nevis tikai organizācijas pastāvīgajiem darbiniekiem — viesis var iestatīt savu skenēšanas uz e-pastu adresi uz svešas organizācijas printera dažu minūšu laikā, bez administratora piekļuves.</p>
+          </div>
         </div>
 
         <div class="panel" id="panel-swap">
-          <h3 class="panel-title">Sākot no nulles</h3>
+          <div class="panel-header">
+            <img class="panel-icon" src="../assets/images/icon-swap.svg" alt="" width="52" height="52">
+            <h3 class="panel-title">Sākot no nulles</h3>
+          </div>
           <div class="panel-grid">
             <div class="panel-block">
               <span class="panel-label">Problēma</span>
@@ -218,49 +287,64 @@
               <p>Tieši tāds pats piecu minūšu process kā pirmoreiz — nekas no iepriekšējā nav jāatceras, nekas nav manuāli jāpārceļ.</p>
             </div>
           </div>
+          <div class="panel-block panel-block--summary">
+            <span class="panel-label">Īsumā</span>
+            <p>Printera nomaiņa ar SendScan nozīmē nofotografēt jauno ierīci un saņemt jaunu konfigurāciju pretī — jūsu skenējumu vēsture un adreses shēma saglabājas, un no vecā printera nekas nav jāatceras vai manuāli jāpārceļ.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-alt">
+  <section class="section-alt" id="how-it-works">
     <div class="wrap">
       <div class="section-head">
         <h2>Kā tas strādā</h2>
         <p>Viena vadīta iestatīšana. Tālāk skenēšana vienkārši strādā — vienmēr.</p>
       </div>
+      <p class="how-it-works-intro">SendScan skenēšanas uz e-pastu iestatīšana izmanto AI printeru atpazīšanu, lai no fotoattēla noteiktu ražotāju un modeli, un tad automātiski izveido atbilstošu SMTP konfigurāciju — bez manuālas servera, porta vai sertifikāta meklēšanas, un bez fiksēta atbalstīto zīmolu saraksta, kuru vispirms jāpārbauda.</p>
       <ol class="steps">
         <li>
-          <h3>Nofotografējiet printeri</h3>
+          <img class="step-icon" src="../assets/images/icon-photo.svg" alt="" width="56" height="56">
+          <h3>1. Nofotografējiet printeri</h3>
           <p>Uzņemiet printera fotoattēlu. Mūsu AI noskaidro precīzu modeli — bez fiksēta saraksta, mēģinām jebkuru printeri.</p>
         </li>
         <li>
-          <h3>Uzreiz saņemiet konfigurāciju</h3>
+          <img class="step-icon" src="../assets/images/icon-config.svg" alt="" width="56" height="56">
+          <h3>2. Uzreiz saņemiet konfigurāciju</h3>
           <p>Izveidojam SMTP iestatījumus tieši šim modelim, kā arī soli pa solim norādes, kur tos ievadīt. Ja modeli neizdodas noteikt — parādām vispārīgo iestatījumu ekrānu.</p>
         </li>
         <li>
-          <h3>Ievadiet to vienreiz</h3>
+          <img class="step-icon" src="../assets/images/icon-enter.svg" alt="" width="56" height="56">
+          <h3>3. Ievadiet to vienreiz</h3>
           <p>Atveriet printera skenēšanas uz e-pastu izvēlni un ievadiet konfigurāciju. Vienreiz — un uz visiem laikiem.</p>
         </li>
         <li>
-          <h3>Vienkārši skenējiet</h3>
+          <img class="step-icon" src="../assets/images/icon-inbox.svg" alt="" width="56" height="56">
+          <h3>4. Vienkārši skenējiet</h3>
           <p>Nospiediet "Scan to Email", izvēlieties adresi, un līdz brīdim, kad skenēšana pabeigta, fails jau ir jūsu iesūtnē — automātiski arhivēts un vienmēr atrodams.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <section>
+  <section id="pricing">
     <div class="wrap">
       <div class="pricing-banner">
         <div class="price-figure">€10 <span>/ gadā par printeri</span></div>
         <p style="color:var(--color-text-muted); margin-top:10px;">Viena fiksēta cena, neatkarīgi no skenēto lapu skaita.</p>
         <span class="badge">Pirmais gads bez maksas tiem, kas piesakās jau tagad</span>
+        <ul class="pricing-includes">
+          <li>AI printera atpazīšana no fotoattēla, jebkuram zīmolam vai modelim</li>
+          <li>Gatava SMTP / skenēšanas uz e-pastu konfigurācija, uzreiz ievadāma</li>
+          <li>Viena, automātiski izveidota adrese katram printerim vai skenerim</li>
+          <li>Neierobežota skenējumu vēsture, meklējama tīmekļa panelī</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="section-alt">
+  <section class="section-alt" id="faq">
     <div class="wrap">
       <div class="section-head">
         <h2>Biežāk uzdotie jautājumi</h2>
@@ -289,6 +373,22 @@
         <details>
           <summary>Kad SendScan startēs?</summary>
           <p>Esam noslēguma sagatavošanās posmā. Pieteikšanās augstāk rezervē jums bezmaksas pirmo gadu un nosūtīs vēstuli brīdī, kad SendScan būs pieejams.</p>
+        </details>
+        <details>
+          <summary>Vai SendScan der mājas lietošanai, ne tikai birojiem?</summary>
+          <p>Jā. SendScan tikpat labi strādā uz viena mājas printera, cik uz biroja printeru parka — katrs ģimenes loceklis var reģistrēt savu adresi uz tās pašas fiziskās ierīces, tāpēc skenēšana vairs nav kaut kas, ko lūdzat izdarīt vienam cilvēkam mājās.</p>
+        </details>
+        <details>
+          <summary>Vai IT administrators var ar SendScan pārvaldīt skenēšanu uz e-pastu vairākiem printeriem?</summary>
+          <p>Jā. Katrs printeris saņem savu, uz foto balstītu iestatīšanu un savu adresi, tāpēc administrators var ieviest SendScan visā jauktu zīmolu printeru parkā, neapgūstot katra printera savādāko SMTP izvēlni, un pieslēgt jaunus darbiniekus, pie printera vairs neejot.</p>
+        </details>
+        <details>
+          <summary>Vai viesis vai apmeklētājs var izmantot SendScan uz cita printera?</summary>
+          <p>Jā. SendScan iestatīšanai nepieciešama tikai fiziska piekļuve printera ekrānam dažas minūtes — nav nepieciešams, lai administrators jūs iepriekš pievieno organizācijas adrešu grāmatai.</p>
+        </details>
+        <details>
+          <summary>Kas notiek ar manu SendScan iestatījumu, ja nomainu printeri?</summary>
+          <p>Jūs nofotografējat jauno printeri un saņemat tam jaunu konfigurāciju. Jūsu skenējumu vēsture un adrese turpina darboties — aparatūras nomaiņa nenozīmē sākt no jauna.</p>
         </details>
       </div>
     </div>

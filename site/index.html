@@ -89,6 +89,38 @@
         "@type": "Answer",
         "text": "We're in final preparation. Signing up on the site reserves a free first year and triggers an email the moment SendScan launches."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is SendScan good for home use, not just offices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. SendScan works on a single home printer just as well as on an office fleet — each family member can register their own address on the same physical device, so scanning stops being something you ask one person in the house to do for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an IT admin manage scan-to-email for many printers with SendScan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each printer gets its own photo-based setup and its own address, so an admin can roll out SendScan across a whole fleet of mixed-brand printers without learning a different SMTP menu for each one, and onboard new employees without touching the printer again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a visitor or guest use SendScan on someone else's printer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Setting up SendScan only requires physical access to the printer's screen for a few minutes — it doesn't require an administrator to add you to that organization's address book first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to my SendScan setup if I replace my printer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You photograph the new printer and receive a fresh configuration for it. Your scan history and address keep working — replacing the hardware doesn't mean starting over."
+      }
     }
   ]
 }
@@ -99,6 +131,12 @@
 <header class="site-header">
   <div class="wrap">
     <a href="index.html" class="logo">Send<span class="dot">Scan</span></a>
+    <nav class="main-nav" aria-label="Section">
+      <a href="#why">Why</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
     <div class="header-actions">
       <nav class="lang-switch" aria-label="Language">
         <a href="index.html" aria-current="true" lang="en" hreflang="en">EN</a>
@@ -113,25 +151,32 @@
 
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Coming soon — sign up for a free first year</span>
-      <h1>Scan to email.<br>Finally, actually easy.</h1>
-      <p class="lede">Every printer already has Scan-to-Email built in — SMTP settings just make it painful to turn on. SendScan photographs your printer, builds the exact configuration for it, and gets you scanning straight to your own inbox in minutes.</p>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="eyebrow">Coming soon — sign up for a free first year</span>
+          <h1>Scan to email.<br>Finally, actually easy.</h1>
+          <p class="lede">Every printer already has Scan-to-Email built in — SMTP settings just make it painful to turn on. SendScan photographs your printer, builds the exact configuration for it, and gets you scanning straight to your own inbox in minutes.</p>
 
-      <div class="signup-form" data-signup-form id="signup">
-        <form>
-          <div class="row">
-            <label for="email" class="sr-only" style="position:absolute;left:-9999px;">Email address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
-            <button type="submit" class="btn btn-primary">Get early access</button>
+          <div class="signup-form" data-signup-form id="signup">
+            <form>
+              <div class="row">
+                <label for="email" class="sr-only" style="position:absolute;left:-9999px;">Email address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                <button type="submit" class="btn btn-primary">Get early access</button>
+              </div>
+            </form>
+            <div class="form-success" role="status">You're on the list! We'll email you the moment SendScan launches — with your free first year already applied.</div>
+            <p class="form-note">No spam. One email when we launch. Free first year, then €10/year per printer.</p>
           </div>
-        </form>
-        <div class="form-success" role="status">You're on the list! We'll email you the moment SendScan launches — with your free first year already applied.</div>
-        <p class="form-note">No spam. One email when we launch. Free first year, then €10/year per printer.</p>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/images/hero-scan.svg" alt="Illustration of a printer scanning a page and delivering it straight to an inbox, marked as received" width="380" height="304">
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="why">
     <div class="wrap">
       <div class="section-head">
         <h2>Whichever one is you</h2>
@@ -140,16 +185,19 @@
 
       <div class="usecases">
         <input type="radio" name="usecase" id="uc-home" class="tab-input" checked>
-        <label class="tab" for="uc-home">🏠 At home</label>
+        <label class="tab" for="uc-home"><img src="assets/images/icon-home.svg" alt="" width="24" height="24"> At home</label>
         <input type="radio" name="usecase" id="uc-office" class="tab-input">
-        <label class="tab" for="uc-office">🏢 In the office</label>
+        <label class="tab" for="uc-office"><img src="assets/images/icon-office.svg" alt="" width="24" height="24"> In the office</label>
         <input type="radio" name="usecase" id="uc-guest" class="tab-input">
-        <label class="tab" for="uc-guest">🧳 On the go</label>
+        <label class="tab" for="uc-guest"><img src="assets/images/icon-guest.svg" alt="" width="24" height="24"> On the go</label>
         <input type="radio" name="usecase" id="uc-swap" class="tab-input">
-        <label class="tab" for="uc-swap">🔁 New printer</label>
+        <label class="tab" for="uc-swap"><img src="assets/images/icon-swap.svg" alt="" width="24" height="24"> New printer</label>
 
         <div class="panel" id="panel-home">
-          <h3 class="panel-title">The one-scanner household</h3>
+          <div class="panel-header">
+            <img class="panel-icon" src="assets/images/icon-home.svg" alt="" width="52" height="52">
+            <h3 class="panel-title">The one-scanner household</h3>
+          </div>
           <div class="panel-grid">
             <div class="panel-block">
               <span class="panel-label">The problem</span>
@@ -164,10 +212,17 @@
               <p>Nothing to understand about SMTP, ports, or certificates. Photograph the printer, paste in the config we give you, once, on the printer's touchscreen. Five minutes — the last time anyone in the house needs to ask for help scanning something.</p>
             </div>
           </div>
+          <div class="panel-block panel-block--summary">
+            <span class="panel-label">In short</span>
+            <p>SendScan lets every person in a household register their own address on the printer you already own, so nobody has to ask a family member to scan their documents for them.</p>
+          </div>
         </div>
 
         <div class="panel" id="panel-office">
-          <h3 class="panel-title">IT's never-ending scanner queue</h3>
+          <div class="panel-header">
+            <img class="panel-icon" src="assets/images/icon-office.svg" alt="" width="52" height="52">
+            <h3 class="panel-title">IT's never-ending scanner queue</h3>
+          </div>
           <div class="panel-grid">
             <div class="panel-block">
               <span class="panel-label">The problem</span>
@@ -182,10 +237,17 @@
               <p>One photo per printer, one config, one five-minute visit to each device — done once, not repeated for every new employee. New hires just get told their address; nobody touches the printer again.</p>
             </div>
           </div>
+          <div class="panel-block panel-block--summary">
+            <span class="panel-label">In short</span>
+            <p>SendScan replaces manual per-printer SMTP configuration with a five-minute, photo-based setup that works the same way across every printer brand in an office, cutting IT's recurring scan-to-email tickets to zero.</p>
+          </div>
         </div>
 
         <div class="panel" id="panel-guest">
-          <h3 class="panel-title">The guest who can't scan</h3>
+          <div class="panel-header">
+            <img class="panel-icon" src="assets/images/icon-guest.svg" alt="" width="52" height="52">
+            <h3 class="panel-title">The guest who can't scan</h3>
+          </div>
           <div class="panel-grid">
             <div class="panel-block">
               <span class="panel-label">The problem</span>
@@ -200,10 +262,17 @@
               <p>Same one-photo flow as anywhere else. You don't need to be "the IT person" or have special access — you need the printer's touchscreen and two minutes.</p>
             </div>
           </div>
+          <div class="panel-block panel-block--summary">
+            <span class="panel-label">In short</span>
+            <p>SendScan works for anyone standing in front of a printer, not just the organization's own staff — a visitor can set up their own scan-to-email address on someone else's printer in minutes, without needing admin access.</p>
+          </div>
         </div>
 
         <div class="panel" id="panel-swap">
-          <h3 class="panel-title">Starting over from zero</h3>
+          <div class="panel-header">
+            <img class="panel-icon" src="assets/images/icon-swap.svg" alt="" width="52" height="52">
+            <h3 class="panel-title">Starting over from zero</h3>
+          </div>
           <div class="panel-grid">
             <div class="panel-block">
               <span class="panel-label">The problem</span>
@@ -218,49 +287,64 @@
               <p>Exactly the same five-minute process as the first time — nothing to remember from before, nothing to migrate by hand.</p>
             </div>
           </div>
+          <div class="panel-block panel-block--summary">
+            <span class="panel-label">In short</span>
+            <p>Replacing a printer with SendScan means photographing the new device and getting a fresh configuration in return — your scan history and address scheme carry over, and nothing from the old printer needs to be remembered or migrated.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-alt">
+  <section class="section-alt" id="how-it-works">
     <div class="wrap">
       <div class="section-head">
         <h2>How it works</h2>
         <p>One guided setup. Then scanning just works, forever.</p>
       </div>
+      <p class="how-it-works-intro">SendScan's scan-to-email setup uses AI printer recognition to read the make and model straight from a photo, then generates the matching SMTP configuration automatically — no manual server, port, or certificate lookup, and no fixed list of supported printer brands to check against first.</p>
       <ol class="steps">
         <li>
-          <h3>Photograph your printer</h3>
+          <img class="step-icon" src="assets/images/icon-photo.svg" alt="" width="56" height="56">
+          <h3>1. Photograph your printer</h3>
           <p>Snap a picture of your printer. Our AI works out the exact model — no fixed list, we try every printer.</p>
         </li>
         <li>
-          <h3>Get your config, instantly</h3>
+          <img class="step-icon" src="assets/images/icon-config.svg" alt="" width="56" height="56">
+          <h3>2. Get your config, instantly</h3>
           <p>We generate the SMTP settings for that specific model, plus a walkthrough of exactly where to enter them. Can't identify your model? We show the generic settings screen instead.</p>
         </li>
         <li>
-          <h3>Enter it once</h3>
+          <img class="step-icon" src="assets/images/icon-enter.svg" alt="" width="56" height="56">
+          <h3>3. Enter it once</h3>
           <p>Open Scan-to-Email on your printer and paste in the config. One time, ever.</p>
         </li>
         <li>
-          <h3>Just scan</h3>
+          <img class="step-icon" src="assets/images/icon-inbox.svg" alt="" width="56" height="56">
+          <h3>4. Just scan</h3>
           <p>Press Scan to Email, pick your address, and by the time the scan finishes it's already in your inbox — automatically archived, always searchable.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <section>
+  <section id="pricing">
     <div class="wrap">
       <div class="pricing-banner">
         <div class="price-figure">€10 <span>/ year, per printer</span></div>
         <p style="color:var(--color-text-muted); margin-top:10px;">One flat price, however many pages you scan.</p>
         <span class="badge">First year free for pre-launch signups</span>
+        <ul class="pricing-includes">
+          <li>AI-based printer identification from a photo, for any brand or model</li>
+          <li>Generated SMTP / Scan-to-Email configuration, ready to paste in</li>
+          <li>One dedicated, auto-generated address per printer or scanner</li>
+          <li>Unlimited scan history, searchable from a web dashboard</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="section-alt">
+  <section class="section-alt" id="faq">
     <div class="wrap">
       <div class="section-head">
         <h2>Frequently asked questions</h2>
@@ -289,6 +373,22 @@
         <details>
           <summary>When does SendScan launch?</summary>
           <p>We're in final preparation. Signing up above reserves your free first year and triggers an email the moment SendScan launches.</p>
+        </details>
+        <details>
+          <summary>Is SendScan good for home use, not just offices?</summary>
+          <p>Yes. SendScan works on a single home printer just as well as on an office fleet — each family member can register their own address on the same physical device, so scanning stops being something you ask one person in the house to do for you.</p>
+        </details>
+        <details>
+          <summary>Can an IT admin manage scan-to-email for many printers with SendScan?</summary>
+          <p>Yes. Each printer gets its own photo-based setup and its own address, so an admin can roll out SendScan across a whole fleet of mixed-brand printers without learning a different SMTP menu for each one, and onboard new employees without touching the printer again.</p>
+        </details>
+        <details>
+          <summary>Can a visitor or guest use SendScan on someone else's printer?</summary>
+          <p>Yes. Setting up SendScan only requires physical access to the printer's screen for a few minutes — it doesn't require an administrator to add you to that organization's address book first.</p>
+        </details>
+        <details>
+          <summary>What happens to my SendScan setup if I replace my printer?</summary>
+          <p>You photograph the new printer and receive a fresh configuration for it. Your scan history and address keep working — replacing the hardware doesn't mean starting over.</p>
         </details>
       </div>
     </div>
