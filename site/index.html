@@ -134,29 +134,90 @@
   <section>
     <div class="wrap">
       <div class="section-head">
-        <h2>Sound familiar?</h2>
-        <p>Scan-to-Email is sitting unused on almost every printer out there. Here's why.</p>
+        <h2>Whichever one is you</h2>
+        <p>Scan-to-Email already sits on almost every printer, unused. Pick the situation that sounds like yours.</p>
       </div>
-      <div class="card-grid">
-        <div class="card">
-          <div class="icon">👤</div>
-          <h3>One scanner, one "scan person"</h3>
-          <p>In every household or office, one device ends up configured — and everyone else just asks that person to scan things for them.</p>
+
+      <div class="usecases">
+        <input type="radio" name="usecase" id="uc-home" class="tab-input" checked>
+        <label class="tab" for="uc-home">🏠 At home</label>
+        <input type="radio" name="usecase" id="uc-office" class="tab-input">
+        <label class="tab" for="uc-office">🏢 In the office</label>
+        <input type="radio" name="usecase" id="uc-guest" class="tab-input">
+        <label class="tab" for="uc-guest">🧳 On the go</label>
+        <input type="radio" name="usecase" id="uc-swap" class="tab-input">
+        <label class="tab" for="uc-swap">🔁 New printer</label>
+
+        <div class="panel" id="panel-home">
+          <h3 class="panel-title">The one-scanner household</h3>
+          <div class="panel-grid">
+            <div class="panel-block">
+              <span class="panel-label">The problem</span>
+              <p>In most homes, only one printer ever got its Scan-to-Email configured — usually by whoever set up the router. Everyone else in the house doesn't have their own address on it, so instead of scanning their own paperwork, they hand it to that one person and wait.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">How SendScan helps</span>
+              <p>Every person in the household can register their own address on that exact same physical printer. Photograph it once, and everyone gets their own SendScan address tied to that one device — same printer, separate mailboxes.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Getting set up</span>
+              <p>Nothing to understand about SMTP, ports, or certificates. Photograph the printer, paste in the config we give you, once, on the printer's touchscreen. Five minutes — the last time anyone in the house needs to ask for help scanning something.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <div class="icon">🔁</div>
-          <h3>IT's never-ending queue</h3>
-          <p>New hire, new printer, new SMTP setup. Every single time, by hand, on a different menu for every brand.</p>
+
+        <div class="panel" id="panel-office">
+          <h3 class="panel-title">IT's never-ending scanner queue</h3>
+          <div class="panel-grid">
+            <div class="panel-block">
+              <span class="panel-label">The problem</span>
+              <p>Office admins redo the same manual SMTP setup for every printer, every new hire, and every brand — Canon, HP, Epson, Brother all have different menus, so there's no single how-to that covers the whole fleet.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">How SendScan helps</span>
+              <p>SendScan identifies each printer's brand and model from a photo and hands back the exact configuration and walkthrough for that specific device, so nobody's reverse-engineering a different menu every time. Multiple printers, one consistent process.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Getting set up</span>
+              <p>One photo per printer, one config, one five-minute visit to each device — done once, not repeated for every new employee. New hires just get told their address; nobody touches the printer again.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <div class="icon">⚠️</div>
-          <h3>Wrong-printer mistakes</h3>
-          <p>Even with an app installed, people scan on the wrong device out of habit — and the file just goes nowhere.</p>
+
+        <div class="panel" id="panel-guest">
+          <h3 class="panel-title">The guest who can't scan</h3>
+          <div class="panel-grid">
+            <div class="panel-block">
+              <span class="panel-label">The problem</span>
+              <p>Visiting a client's office, a co-working space, or a shared library, Scan-to-Email is set up for the regular staff only — a guest can't add themselves, so they end up taking a phone photo of a contract or an ID instead.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">How SendScan helps</span>
+              <p>Anyone can register their own SendScan address for any printer they have physical access to, on the spot — it doesn't require an admin adding you to that organization's internal address book.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Getting set up</span>
+              <p>Same one-photo flow as anywhere else. You don't need to be "the IT person" or have special access — you need the printer's touchscreen and two minutes.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <div class="icon">✨</div>
-          <h3>A feature you already own</h3>
-          <p>Almost every printer ships with Scan-to-Email built in. Nobody uses it because setting it up is the hard part — not the scanning.</p>
+
+        <div class="panel" id="panel-swap">
+          <h3 class="panel-title">Starting over from zero</h3>
+          <div class="panel-grid">
+            <div class="panel-block">
+              <span class="panel-label">The problem</span>
+              <p>A printer breaks or gets swapped for a newer model, and with it goes every SMTP setting that used to work. Nobody remembers the exact values, so scanning stays broken until someone finds the time to redo it.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">How SendScan helps</span>
+              <p>Just photograph the new printer. SendScan doesn't care that the old one is gone — it generates a fresh configuration for whatever model replaced it, and your existing scan history keeps going, unaffected by the hardware swap underneath it.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Getting set up</span>
+              <p>Exactly the same five-minute process as the first time — nothing to remember from before, nothing to migrate by hand.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

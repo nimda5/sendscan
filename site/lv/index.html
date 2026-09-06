@@ -134,29 +134,90 @@
   <section>
     <div class="wrap">
       <div class="section-head">
-        <h2>Vai tas izklausās pazīstami?</h2>
-        <p>Skenēšana uz e-pastu guļ neizmantota gandrīz katrā printerī. Lūk, kāpēc.</p>
+        <h2>Kurš no šiem esat jūs</h2>
+        <p>Skenēšana uz e-pastu jau atrodas gandrīz katrā printerī, tikai neizmantota. Izvēlieties situāciju, kas izklausās pēc jūsējās.</p>
       </div>
-      <div class="card-grid">
-        <div class="card">
-          <div class="icon">👤</div>
-          <h3>Viens skeneris, viens "skenēšanas cilvēks"</h3>
-          <p>Katrā mājsaimniecībā vai birojā konfigurēta ir tikai viena ierīce — un visi pārējie lūdz šo cilvēku noskenēt viņu vietā.</p>
+
+      <div class="usecases">
+        <input type="radio" name="usecase" id="uc-home" class="tab-input" checked>
+        <label class="tab" for="uc-home">🏠 Mājās</label>
+        <input type="radio" name="usecase" id="uc-office" class="tab-input">
+        <label class="tab" for="uc-office">🏢 Birojā</label>
+        <input type="radio" name="usecase" id="uc-guest" class="tab-input">
+        <label class="tab" for="uc-guest">🧳 Ceļā</label>
+        <input type="radio" name="usecase" id="uc-swap" class="tab-input">
+        <label class="tab" for="uc-swap">🔁 Jauns printeris</label>
+
+        <div class="panel" id="panel-home">
+          <h3 class="panel-title">Mājsaimniecība ar vienu skeneri</h3>
+          <div class="panel-grid">
+            <div class="panel-block">
+              <span class="panel-label">Problēma</span>
+              <p>Vairumā māju skenēšana uz e-pastu ir iestatīta tikai vienam printerim — parasti to izdarījis tas, kurš kādreiz uzstādīja maršrutētāju. Pārējiem mājās uz šī printera nav savas adreses, tāpēc, tā vietā, lai noskenētu savus dokumentus, viņi tos atdod tam vienam cilvēkam un gaida.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Kā palīdz SendScan</span>
+              <p>Ikviens mājās var reģistrēt savu adresi tieši uz tā paša fiziskā printera. Nofotografējiet to vienreiz, un katrs saņem savu SendScan adresi, kas piesaistīta tai pašai ierīcei — viens printeris, atsevišķas pastkastes.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Iestatīšana</span>
+              <p>Nav nekā, kas jāsaprot par SMTP, portiem vai sertifikātiem. Nofotografējat printeri, mēs iedodam konfigurāciju, jūs to vienreiz ievadāt printera skārienekrānā. Piecas minūtes — un tā ir pēdējā reize, kad kādam mājās jālūdz palīdzība kaut ko noskenēt.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <div class="icon">🔁</div>
-          <h3>IT bezgalīgā rinda</h3>
-          <p>Jauns darbinieks, jauns printeris, jauna SMTP iestatīšana. Katru reizi ar rokām, katrai zīmola izvēlnei savādāk.</p>
+
+        <div class="panel" id="panel-office">
+          <h3 class="panel-title">IT bezgalīgā skenēšanas rinda</h3>
+          <div class="panel-grid">
+            <div class="panel-block">
+              <span class="panel-label">Problēma</span>
+              <p>Biroja administratori atkārto vienu un to pašu manuālo SMTP iestatīšanu katram printerim, katram jaunam darbiniekam un katram zīmolam — Canon, HP, Epson, Brother katram ir savādāka izvēlne, tāpēc nav vienas instrukcijas visam parkam.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Kā palīdz SendScan</span>
+              <p>SendScan pēc fotoattēla atpazīst katra printera zīmolu un modeli un iedod precīzu konfigurāciju un norādes tieši šai ierīcei, tāpēc nevienam nav jāatšifrē cita izvēlne katru reizi. Vairāki printeri, viens konsekvents process.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Iestatīšana</span>
+              <p>Viens foto katram printerim, viena konfigurācija, viena piecu minūšu vizīte pie katras ierīces — izdarīts vienreiz, nevis atkārtots katram jaunam darbiniekam. Jaunie darbinieki vienkārši saņem savu adresi; pie printera vairs nevienam nav jāiet.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <div class="icon">⚠️</div>
-          <h3>Kļūdas ar nepareizu printeri</h3>
-          <p>Pat ja lietotne ir uzstādīta, cilvēki pieraduši skenēt uz nepareizās ierīces — un fails vienkārši pazūd.</p>
+
+        <div class="panel" id="panel-guest">
+          <h3 class="panel-title">Viesis, kurš nevar noskenēt</h3>
+          <div class="panel-grid">
+            <div class="panel-block">
+              <span class="panel-label">Problēma</span>
+              <p>Apmeklējot klienta biroju, kopstrādes telpu vai koplietošanas bibliotēku, skenēšana uz e-pastu ir iestatīta tikai pastāvīgajiem darbiniekiem — viesis pats sevi nevar pievienot, tāpēc beigās nofotografē līgumu vai personu apliecinošu dokumentu ar telefonu.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Kā palīdz SendScan</span>
+              <p>Ikviens var uzreiz reģistrēt savu SendScan adresi jebkuram printerim, kuram viņam ir fiziska piekļuve — tam nav nepieciešams, lai administrators pievieno jūs organizācijas iekšējai adrešu grāmatai.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Iestatīšana</span>
+              <p>Tāda pati viena-foto plūsma kā jebkur citur. Nav jābūt "IT cilvēkam" vai jāsaņem īpaša piekļuve — vajag tikai printera skārienekrānu un divas minūtes.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <div class="icon">✨</div>
-          <h3>Funkcija, kas jums jau pieder</h3>
-          <p>Gandrīz katrs printeris nāk ar iebūvētu skenēšanu uz e-pastu. To nelieto, jo grūta ir iestatīšana, nevis pati skenēšana.</p>
+
+        <div class="panel" id="panel-swap">
+          <h3 class="panel-title">Sākot no nulles</h3>
+          <div class="panel-grid">
+            <div class="panel-block">
+              <span class="panel-label">Problēma</span>
+              <p>Printeris salūst vai tiek nomainīts pret jaunāku modeli, un līdz ar to pazūd visi SMTP iestatījumi, kas kādreiz strādāja. Neviens neatceras precīzās vērtības, tāpēc skenēšana ir salauzta, kamēr kāds atrod laiku to pārtaisīt.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Kā palīdz SendScan</span>
+              <p>Vienkārši nofotografējiet jauno printeri. SendScan nav svarīgi, ka vecā vairs nav — tas izveido jaunu konfigurāciju tam modelim, kas to aizstāja, un jūsu esošā skenējumu vēsture turpinās, hardware nomaiņas neskarta.</p>
+            </div>
+            <div class="panel-block">
+              <span class="panel-label">Iestatīšana</span>
+              <p>Tieši tāds pats piecu minūšu process kā pirmoreiz — nekas no iepriekšējā nav jāatceras, nekas nav manuāli jāpārceļ.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
