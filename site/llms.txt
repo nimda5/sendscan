@@ -1,0 +1,20 @@
+# SendScan
+
+> SendScan turns any printer's built-in scanner into a real Scan-to-Email tool. Photograph your printer, get a ready-made SMTP configuration for that exact model, enter it once, and every scan lands automatically in a dedicated inbox — with a full scan history built in.
+
+## What it does
+- Identifies a printer's make and model from a single photo using AI — not a fixed supported-models list — and falls back to showing generic SMTP settings if the model can't be confidently identified.
+- Generates the exact Scan-to-Email / SMTP configuration for that printer, with setup instructions matching its specific menus.
+- Gives each printer its own dedicated, auto-generated email address (not user-editable in v1).
+- Stores every scan sent to that address automatically, building a searchable per-printer history with no extra step at scan time.
+
+## Who it's for
+- Households where only one person's printer is ever configured for scanning, and everyone else asks them to do it.
+- Offices and IT admins who repeat the same manual SMTP setup for every new printer or new employee.
+- Anyone who has given up on Scan-to-Email setup and resorted to USB flash drives, scanning apps, or phone photos instead.
+
+## Pricing
+€10 per year, per printer or scanner. Anyone who signs up before public launch gets their first year free.
+
+## Status
+Pre-launch ("coming soon"). Sign up at https://sendscan.me/ (English) or https://sendscan.me/lv/ (Latvian) for early access and a free first year.
